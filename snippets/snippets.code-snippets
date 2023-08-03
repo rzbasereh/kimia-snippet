@@ -1,21 +1,137 @@
 {
+  "Test Suit": {
+    "prefix": ["testSuit", "ts"],
+    "body": [
+      "const renderComponent = () => {",
+      "\t${2:}",
+      "};",
+      "",
+      "describe('${TM_FILENAME_BASE}', () => {",
+      "\tlet user: Actor;",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\tuser = new User('${2:Name}');",
+      "\t\trenderComponent();",
+      "\t});",
+      "",
+      "\t${3:}",
+      "});"
+    ],
+    "description": "A test suit."
+  },
+  "Test Case": {
+    "prefix": ["testCase", "tc"],
+    "body": [
+      "it('${1:label}', async () => {",
+      "\tawait user.attemptsTo(${2:task}).expectsTo(${3:question}).run();",
+      "});"
+    ],
+    "description": "A test case."
+  },
+  "Arrow Func": {
+    "prefix": ["arrowFunc", "af"],
+    "body": ["const ${1:fn} = (${2:param}) => {", "\t${2:}", "};"],
+    "description": "A arrow function."
+  },
+  "Async Arrow Func": {
+    "prefix": ["asyncArrowFunc", "aaf"],
+    "body": ["const ${1:fn} = async (${2:param}) => {", "\t${2:}", "};"],
+    "description": "A async arrow function."
+  },
   "Default Export Arrow Func": {
     "prefix": ["defaulExportArrowFunc", "deaf"],
     "body": [
       "const ${TM_FILENAME_BASE} = (${1:param}) => {",
       "\t${2:}",
       "};",
-      "\nexport default ${TM_FILENAME_BASE};\n"
+      "",
+      "export default ${TM_FILENAME_BASE};"
     ],
-    "description": "A test case."
+    "description": "A default exported arrow function."
+  },
+  "Default Export Async Arrow Func": {
+    "prefix": ["defaulExportAsyncArrowFunc", "deaaf"],
+    "body": [
+      "const ${TM_FILENAME_BASE} = async (${1:param}) => {",
+      "\t${2:}",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "A default exported async arrow function."
+  },
+  "Default Export Arrow FunFunction": {
+    "prefix": ["defaulExportArrowFunFunction", "deafaf"],
+    "body": [
+      "const ${TM_FILENAME_BASE} = (${1:param}) => (${2:param1}) => {",
+      "\t${3:}",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "A default exported arrow funfunction."
+  },
+  "Default Export Arrow FunAsyncFunction": {
+    "prefix": ["defaulExportArrowFunFunction", "deafaaf"],
+    "body": [
+      "const ${TM_FILENAME_BASE} = (${1:param}) => async (${2:param1}) => {",
+      "\t${3:}",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "A default exported arrow funasyncfunction."
   },
   "Immediately Export Arrow Func": {
     "prefix": ["immediatelyExportArrowFunc", "ieaf"],
     "body": [
       "export const ${TM_FILENAME_BASE} = (${1:param}) => {",
       "\t${2:}",
-      "};\n"
+      "};"
     ],
-    "description": "A test case."
+    "description": "A export arrow function."
+  },
+  "Immediately Export Async Arrow Func": {
+    "prefix": ["immediatelyExportAsyncArrowFunc", "ieaaf"],
+    "body": [
+      "export const ${TM_FILENAME_BASE} = async (${1:param}) => {",
+      "\t${2:}",
+      "};"
+    ],
+    "description": "A export async arrow function."
+  },
+  "Default Export Component": {
+    "prefix": ["defaultExportComponent", "dec"],
+    "body": [
+      "type PropsType = {",
+      "\t${1:}",
+      "};",
+      "",
+      "const ${TM_FILENAME_BASE} = (props: PropsType) => {",
+      "\treturn (",
+      "\t\t<div>${2:}</div>",
+      "\t)",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "A default exported Component."
+  },
+  "Default Export Component Type": {
+    "prefix": ["defaultExportComponentType", "dect"],
+    "body": [
+      "type ${TM_FILENAME_BASE}Type = {",
+      "\t${1:}",
+      "};",
+      "",
+      "const ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Type) => {",
+      "\treturn (",
+      "\t\t<div>${2:}</div>",
+      "\t)",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "A default exported Component with exported type."
   }
 }
