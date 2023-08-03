@@ -1,1 +1,21 @@
-{}
+{
+  "Default Export Arrow Func": {
+    "prefix": ["defaulExportArrowFunc", "deaf"],
+    "body": [
+      "const ${TM_FILENAME_BASE} = (${1:param}) => {",
+      "\t${2:}",
+      "};",
+      "\nexport default ${TM_FILENAME_BASE};\n"
+    ],
+    "description": "A test case."
+  },
+  "Immediately Export Arrow Func": {
+    "prefix": ["immediatelyExportArrowFunc", "ieaf"],
+    "body": [
+      "export const ${TM_FILENAME_BASE} = (${1:param}) => {",
+      "\t${2:}",
+      "};\n"
+    ],
+    "description": "A test case."
+  }
+}
