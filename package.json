@@ -13,6 +13,9 @@
   "categories": [
     "Snippets"
   ],
+  "scripts": {
+    "package": "rm kimia-snippet* & vsce package"
+  },
   "contributes": {
     "snippets": [
       {
@@ -32,5 +35,8 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
+  },
+  "dependencies": {
+    "@vscode/vsce": "^2.20.0"
   }
 }
