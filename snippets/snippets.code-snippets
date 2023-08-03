@@ -3,7 +3,7 @@
     "prefix": ["testSuit", "ts"],
     "body": [
       "const renderComponent = () => {",
-      "\t${2:}",
+      "\t${1:}",
       "};",
       "",
       "describe('${TM_FILENAME_BASE}', () => {",
@@ -30,19 +30,19 @@
   },
   "Arrow Func": {
     "prefix": ["arrowFunc", "af"],
-    "body": ["const ${1:fn} = (${2:param}) => {", "\t${2:}", "};"],
+    "body": ["const ${1:fn} = (${2:param}) => {", "\t${3:}", "};"],
     "description": "A arrow function."
   },
   "Async Arrow Func": {
     "prefix": ["asyncArrowFunc", "aaf"],
-    "body": ["const ${1:fn} = async (${2:param}) => {", "\t${2:}", "};"],
+    "body": ["const ${1:fn} = async (${2:param}) => {", "\t${3:}", "};"],
     "description": "A async arrow function."
   },
   "Default Export Arrow Func": {
     "prefix": ["defaulExportArrowFunc", "deaf"],
     "body": [
-      "const ${TM_FILENAME_BASE} = (${1:param}) => {",
-      "\t${2:}",
+      "const ${1:${TM_FILENAME_BASE}} = (${2:param}) => {",
+      "\t${3:}",
       "};",
       "",
       "export default ${TM_FILENAME_BASE};"
@@ -52,8 +52,8 @@
   "Default Export Async Arrow Func": {
     "prefix": ["defaulExportAsyncArrowFunc", "deaaf"],
     "body": [
-      "const ${TM_FILENAME_BASE} = async (${1:param}) => {",
-      "\t${2:}",
+      "const ${1:${TM_FILENAME_BASE}} = async (${2:param}) => {",
+      "\t${3:}",
       "};",
       "",
       "export default ${TM_FILENAME_BASE};"
@@ -63,8 +63,8 @@
   "Default Export Arrow FunFunction": {
     "prefix": ["defaulExportArrowFunFunction", "deafaf"],
     "body": [
-      "const ${TM_FILENAME_BASE} = (${1:param}) => (${2:param1}) => {",
-      "\t${3:}",
+      "const ${1:${TM_FILENAME_BASE}} = (${2:param}) => (${3:param1}) => {",
+      "\t${4:}",
       "};",
       "",
       "export default ${TM_FILENAME_BASE};"
@@ -74,8 +74,8 @@
   "Default Export Arrow FunAsyncFunction": {
     "prefix": ["defaulExportArrowFunFunction", "deafaaf"],
     "body": [
-      "const ${TM_FILENAME_BASE} = (${1:param}) => async (${2:param1}) => {",
-      "\t${3:}",
+      "const ${1:${TM_FILENAME_BASE}} = (${2:param}) => async (${3:param1}) => {",
+      "\t${4:}",
       "};",
       "",
       "export default ${TM_FILENAME_BASE};"
@@ -85,8 +85,8 @@
   "Immediately Export Arrow Func": {
     "prefix": ["immediatelyExportArrowFunc", "ieaf"],
     "body": [
-      "export const ${TM_FILENAME_BASE} = (${1:param}) => {",
-      "\t${2:}",
+      "export const ${1:${TM_FILENAME_BASE}} = (${2:param}) => {",
+      "\t${3:}",
       "};"
     ],
     "description": "A export arrow function."
@@ -94,8 +94,8 @@
   "Immediately Export Async Arrow Func": {
     "prefix": ["immediatelyExportAsyncArrowFunc", "ieaaf"],
     "body": [
-      "export const ${TM_FILENAME_BASE} = async (${1:param}) => {",
-      "\t${2:}",
+      "export const ${1:${TM_FILENAME_BASE}} = async (${2:param}) => {",
+      "\t${3:}",
       "};"
     ],
     "description": "A export async arrow function."
